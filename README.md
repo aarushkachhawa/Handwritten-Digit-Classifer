@@ -14,7 +14,7 @@
 
 ## Project Overview
 
-Welcome to the Handwritten Digit Recognition project! In this project, we will create a simple editor tool that will allow you to draw handwritten digits (0-9). For each digit you draw you can click a button, 'Predict the Digit'. The tool will then output a prediction of the digit and an accuracy score for the prediction. 
+Welcome to the Handwritten Digit Recognition project! In this project, I will create a simple editor tool that will allow you to draw handwritten digits (0-9). For each digit you draw you can click a button, 'Predict the Digit'. The tool will then output a prediction of the digit and an accuracy score for the prediction. 
 
 ![Blank Tool][image11]
 
@@ -26,28 +26,28 @@ The tool supports 2 different implementations of neural networks to make the pre
 ### Convolutional Neural Network
 
 #### Data 
-We start with downloading the data. We use the MNIST database of hand written digits to train and test the model. We load in the training and test data, split the training data into a training and validation set.
+I started with downloading the data. I used the MNIST database of hand written digits to train and test the model. I loaded in the training and test data, split the training data into a training and validation set.
 
 #### CNN architecture 
 * 2D Convolutional layers, which can be thought of as stack of filtered images. 
 * Maxpooling layers, which reduce the x-y size of an input, keeping only the most active pixels from the previous layer. 
 * Linear + Dropout layers to avoid overfitting and produce a 10-dim output.
 
-The more convolutional layers we include, the more complex patterns in color and shape a model can detect. Hence our model includes 2 convolutional layers as well as linear layers + dropout in between to avoid overfitting.
+The more convolutional layers I include, the more complex patterns in color and shape a model can detect. Hence my model includes 2 convolutional layers as well as linear layers + dropout in between to avoid overfitting.
 
 #### Loss optimization 
-We use a loss and optimization function that is best suited for this classification task namely keras categorical_crossentropy loss funcion and Adadelta optimizer
+I used a loss and optimization function that is best suited for this classification task namely keras categorical_crossentropy loss funcion and Adadelta optimizer
 
 ### Multi Layer Perceptron
 
 #### Data Loading
-We use the MNIST database of handwritten digits to train the MLP. We can set a batch_size to load more data at a time. We create DataLoaders for training and test datasets
+I used the MNIST database of handwritten digits to train the MLP. I set a batch_size to load more data at a time. I created DataLoaders for training and test datasets
 
 #### Network Architecture 
-The architecture will be responsible for seeing as input a 784-dim Tensor of pixel values for each image, and producing a Tensor of length 10 (our number of classes) that indicates the class scores for an input image. We use two hidden layers and dropout to avoid overfitting.
+The architecture will be responsible for seeing as input a 784-dim Tensor of pixel values for each image, and producing a Tensor of length 10 (my number of classes) that indicates the class scores for an input image. I used two hidden layers and dropout to avoid overfitting.
 
 #### Loss Function and Optimizer 
-We use cross-entropy loss for classification and stochastic gradient descent optimizer  
+I used cross-entropy loss for classification and stochastic gradient descent optimizer  
 
 #### Training the Network 
 The steps for training/learning from a batch of data are described in the comments below:
